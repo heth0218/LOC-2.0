@@ -1,0 +1,273 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+
+.header ul{
+  float :right;
+  list-style: none;
+  margin:30px;
+  
+}
+
+/* .sticky{
+  position:sticky;
+  top:0;
+} */
+
+.header ul li{
+  display:inline-block;
+  padding:15px 25px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+.header ul li a{
+  color: rgb(167, 126, 25);
+}
+
+.header ul li a:hover{
+  color:white;
+  transition: .2s ease-in; 
+  text-decoration: none;
+}
+
+.header ul li:hover{
+  background-color: black;
+  border-radius: 9px;
+  transition: .4s ease-in; 
+  text-decoration: none;
+}
+
+img{
+  margin-left:70px;
+}
+
+.mySlides{
+  display:none;
+  margin-left:-200px;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(230, 16, 183);
+  font-size: 75px;
+}
+
+.container {
+  position: relative;
+  color: white;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: .5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  right: 0;
+  height: 100%;
+  width: 97.48%;
+  opacity: 0;
+  transition: .5s ease;
+  
+}
+
+.container:hover .image {
+  opacity: 0.5;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color:#222;
+  font-size: 75px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.about-text{
+    font-size:25px
+}
+
+.progress-bar,.progress{
+    border-radius:16px;
+}
+
+.services{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(photo2.jpg);
+    background-size: cover;
+    background-position: center;
+    color:#efefef;
+    background-attachment: fixed;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+
+.services h1{
+    text-align: center;
+    color: #efefef;
+    padding-bottom: 10px;
+}
+
+.services h1::after{
+  content: '';
+  background: #efefef;
+  display:block;
+  height:3px;
+  width:170px;
+  margin:20px auto 5px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #eee;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #777;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+body{
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin:0;
+
+}
+
+
+.menu-area{
+  width:100%;
+  overflow: auto;
+  background-color: #000;
+}/*
+.menu-area ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-area ul li{
+  float: left;
+}*/
+.menu-area ul li a{
+  color:#fff;
+}
+.menu-area ul li a:hover{
+  background: #000;
+
+}
+#search{
+  width: 450px;
+  padding: 5px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  margin: 15px;
+}
+
+/*styling of questions page*/
+body{
+  background-color: #ddd;
+  background-size: cover;
+}
+.style{
+  font-size:30px;
+  color:#555;
+}
+
+
+.style :hover{
+  text-decoration:none;
+}
+
+.fa {
+  font-size: 500px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+textarea .html-text-box {
+  background-color:#ffffff;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  border-width:1;
+  border-style:solid;
+  border-color:#cccccc;
+  font-family:Arial;
+  font-size:14pt;
+  color:#000000;
+}
+input .html-text-box {
+  background-color:#ffffff;
+  font-family:Arial;
+  font-size:14pt;
+  color:#000000;
+}
+
+.ownquestion{
+  text-align: center;
+  color:#fff;
+}
+
+
+
+
+
+
+

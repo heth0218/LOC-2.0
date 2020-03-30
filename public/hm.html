@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+</head>
+<body>
+
+  <div class="menu-area wrapper animated bounceInLeft">
+    <ul class="navbar nav">
+        <li class="nav-item">
+            <img src="pic10.png" alt="logo" width="50%" height="78px">
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" href="#" style="font-size:30px">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="home.html" style="font-size:30px">QUESTIONS</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" href="lol.html" style="font-size:30px">CHAT</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" href="/graduates" style="font-size:30px">SPEAKER</a>
+        </li>
+        <li>
+            <input type="text" name="" id="search" placeholder="Search Graduates" width="50%">
+        </li>
+        
+    </ul>
+</div>
+  
+
+    <div class="container">
+        <img class="mySlides image" src="pic4.jpg" style="width:136%;height:600px" alt="Avatar" >
+        <div class="overlay">
+          <h1 class="text">Innovative platform to communicate</h1>
+        </div>
+        <img class="mySlides image" src="pic5.jpg" style="width:136%;height:600px" alt="Avatar" >
+        <div class="overlay">
+          <h1 class="text">Solve doubts with Graduate</h1>
+        </div>
+        <img class="mySlides image" src="pic6.jpg" style="width:136%;height:600px" alt="Avatar" >
+        <div class="overlay">
+          <h1 class="text">Ask questions to the world!</h1>
+        </div>
+      </div>
+      
+      <div style="background-color:#ddd">
+      <h1 style="text-decoration:underline;color:#444;text-align:center;padding:25px;font-size:60px">About Us</h1>
+      <div class="container-fluid">
+         <div class="row">
+           <div class="col-lg-6">
+             <p style="color:#555;font-size:28px">Inclusive school communities are educational settings in which students with disabilities have opportunities to participate and receive support in all aspects of school life alongside peers who do not have disabilities. 
+               In an inclusive system, special educators, specialized instructional support personnel, general educators, and other education personnel work together to address the needs of students with disabilities.
+                By collaborating, these educators better support the learning and participation of all students.
+                 Furthermore, research demonstrates that a learning community is better, richer, and more effective when students with disabilities are full participants.</p>
+           </div>
+           <div class="col-lg-6">
+             <h2 style="color:#444;font-size:40px">Critic Reviews</h2>
+             <h5 style="font-size:30px;margin-top:15px">Ease of Access</h5>
+             <div class="progress">
+               <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:90%">90%</div>
+             </div>
+             <h5 style="font-size:30px;margin-top:15px">User Interface</h5>
+             <div class="progress">
+               <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:85%">85%</div>
+             </div>
+             <h5 style="font-size:30px;margin-top:15px">Content</h5>
+             <div class="progress">
+               <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:80%">80%</div>
+             </div>
+             <h5 style="font-size:30px;margin-top:15px">Designing</h5>
+             <div class="progress">
+               <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:87%">87%</div>
+             </div>
+           </div>
+         
+      </div>
+      </div>
+      </div>
+      <div style="background-color: #eee;">
+      <h1 style="font-size:60px;text-decoration:underline;color:#444;text-align:center">Team</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="flip-card" style="margin-left:145px">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="pic7.jpg" alt="Avatar" style="width:350px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                  <h1>Jenish Hirpara</h1> 
+                  <p style="font-size:30px">Architect & Engineer</p> 
+                  <p style="font-size:30px">Loves to code!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="flip-card" style="margin-left:145px">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="pic8.jpg" alt="Avatar" style="width:350px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                  <h1>Jenish Hirpara</h1> 
+                  <p style="font-size:30px">Architect & Engineer</p> 
+                  <p style="font-size:30px" >Loves to code!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+<script>
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var y = document.getElementsByClassName("text");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+    y[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  y[myIndex-1].style.display = "block"; 
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+ var value = false;
+function unHide(){
+    var p = document.getElementById("hidden-text");
+    value = !value;
+    if(value){
+        p.style.display = 'block';
+    }else{
+        p.style.display = 'none';
+    }
+}
+
+</script>
+</body>
+</html>

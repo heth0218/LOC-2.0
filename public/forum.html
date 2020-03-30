@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forum</title>
+</head>
+<body>
+    <input type="text" id="question" />
+    <button onclick="hell()">
+        Submit
+    </button>
+    <button onclick="hello()">
+        Like
+    </button>
+ <button onclick="hello2()">
+     Dislike
+ </button>  
+ <div onclick="haste()" id="heth">
+
+ </div> 
+ <input type="text" id="answer"/>
+ <button onclick="ans()">
+     Answer me
+ </button>
+ <a href="ind.html"><button>
+    Next page
+</button></a>
+</body>
+<script>
+     let id;
+    const hell=async ()=>{
+        const item=localStorage.getItem('user');
+        const question=document.getElementById('question').value;
+        const data={question,item}
+        const option={
+		method:"POST",
+		headers:{
+			'Content-Type':'application/json'
+		},
+		body:JSON.stringify(data)
+	};
+	console.log(data)
+	const resp=await fetch('/question',option);
+	const json=await resp.json();
+    console.log(json)
+    id=json._id
+    document.getElementById('heth').innerHTML=`${json._id}-${json.question}`
+
+    }
+   
+    const haste=async()=>{
+        const hell=document.getElementById('heth').innerHTML;
+        console.log(hell)
+       const arr= hell.split('-')
+    console.log(arr)
+    const resp=await fetch(`/click/${arr[0]}`);
+    const json=await resp.json();
+    console.log(json);
+    }
+
+    const hello=async ()=>{
+const resp=await fetch('/like');
+const json=await resp.json();
+console.log(json);
+    }
+
+    const ans=async ()=>{
+const ans=document.getElementById('answer').value;
+const item=localStorage.getItem('user');
+console.log("LOCAL STORAGE",item);
+console.log(id);
+const data={ans,item,id}
+console.log(data)
+        const option={
+		method:"POST",
+		headers:{
+			'Content-Type':'application/json'
+		},
+		body:JSON.stringify(data)
+	};
+	console.log(data)
+	const resp=await fetch('/ans',option);
+	const json=await resp.json();
+    console.log(json)
+    }
+
+</script>
+</html>
